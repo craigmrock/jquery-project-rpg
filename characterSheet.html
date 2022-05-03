@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Character Sheet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>Welcome to Vampires RPG</h1>
+<h2>The online roll-playing game</h2>
+<button id="rules">Rules</button>
+<div id="gameRules">
+    <p>
+        1. Fill out your character's name and enter your name.<br>
+        2. Select a character type, then class.<br>
+        3. Click the Play Now button to play.<br>
+        4. Click the Attack button to attack, then the Defend button <br>
+        for more realistic combat.
+        5. Watch your experience and level increase with each fallen foe.
+        6. If you should perish in battle, refresh the browser to play again.<br>
+        7. If this makes sense, click the Got It button.
+    </p>
+    <button id="gotIt">Got it!</button>
+</div>
+<h1>Create Your Character!</h1>
+<p>
+<form name="characterSheet" id="characterSheet" method="GET">
+    <fieldset id=characterInfo>
+        <legend>Character Sheet</legend>
+
+        <div class="chooseCharacter" id="chooseCharacter">
+            <label for="cName">Character Name*</label>
+            <input name="cName" id="cName" type="text" />
+            <br>
+            <label for="pName">Player Name*</label>
+            <input name="pName" id="pName" type="text" />
+            <br>
+            <label for="characterTypes">Character Type</label>
+            <select id="characterTypes" name="characterTypes">
+                <option>Select Character Type</option>
+            </select>
+            <br>
+            <label for="characterClass">Character Class</label>
+            <select id="characterClass" name="characterClass">
+                <option>Select Character Class</option>
+            </select>
+            <br>
+            <label for="health">Character Health</label>
+            <input type="text" id="health" name="health"></select>
+            <br>
+            <label for="experiencePoints">Experience Points</label>
+            <input type="text" readonly id="experiencePoints" name="experiencePoints"></select>
+            <br>
+            <label for="playerLevel">Level</label>
+            <input type="text" readonly id="playerLevel" name="playerLevel"></select>
+            <br>
+            <label for="commonItems">Common Items</label>
+            <textarea id="commonItems" name="commonItems"></textarea>
+            <br>
+            <button id="playBtn" name="playBtn">Play Now!</button>
+        </div>
+
+        <div id="generateCombat">
+            <button id="attackRoll">Attack</button>
+            <button id="defendRoll">Defend</button>
+            <br>
+            <label for="playerAttack">Player Attack</label>
+            <input type="text" id="playerAttack" name="playerAttack"></select>
+            <br>
+            <label for="playerDefense">Player Defense</label>
+            <input type="text" id="playerDefense" name="playerDefense"></select>
+            <br>
+            <label for="oppAttack">Opponent Attack</label>
+            <input type="text" id="oppAttack" name="oppAttack"></select>
+            <br>
+            <label for="oppDefense">Opponent Defense</label>
+            <input type="text" id="oppDefense" name="oppDefense"></select>
+            <br>
+            <label for="oppHealth">Opponent Health</label>
+            <input type="text" id="oppHealth" name="oppHealth"></select>
+            <br>
+        </div>
+
+    </fieldset>
+
+</form>
+</p>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="characterData.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
